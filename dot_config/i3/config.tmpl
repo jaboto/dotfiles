@@ -212,4 +212,9 @@ exec --no-startup-id xbindkeys &
 exec --no-startup-id /usr/bin/feh --bg-scale '{{ .chezmoi.homedir }}/artGnome/background/current' &
 {{- end }}
 
+{{- if eq .chezmoi.hostname "iceage" }}
+exec --no-startup-id blueman-applet
+exec --no-startup-id xcompmgr 
+{{- end }}
+
 
