@@ -1,3 +1,13 @@
+# This file is managed with a chezmoi template
+# Verify the machine is properly detected
+{{ if eq .chezmoi.hostname "WeatherLight" }}
+# Detected Thinkpad X1 Carbon 
+{{ end }}
+{{ if eq .chezmoi.hostname "iceage" }}
+# Detected Vaio VGN-P21Z
+{{ end }}
+
+{{ if eq .chezmoi.hostname "WeatherLight" }}
 # Thinkpad X1 Carbon trackpoint
 ID=`xinput list | grep "TrackPoint" | awk '{ split($6,id,"="); print id[2] }'`
 xinput set-int-prop $ID "Evdev Wheel Emulation" 8 1
@@ -5,12 +15,10 @@ xinput set-int-prop $ID "Evdev Wheel Emulation Button" 8 2
 xinput set-int-prop $ID "Evdev Wheel Emulation Axes" 8 6 7 4 5
 xinput set-prop $ID "Evdev Wheel Emulation Inertia" 10
 xinput set-prop $ID "Evdev Wheel Emulation Timeout" 200
+{{ end }}
 
 # Locale settings
 export LC_TIME="en_GB.UTF-8"
 export LC_NUMERIC="en_GB.UTF-8"
 export LC_MEASUREMENT="en_GB.UTF-8"
 setxkbmap -layout us -variant intl
-
-# Polkit
-usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &

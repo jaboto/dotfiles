@@ -4,12 +4,12 @@
 
 # This file has been generated via chezmoi template for this specific computer
 # verify that it matches:
-{{- if eq .chezmoi.hostname "WeatherLight" }}
+{{ if eq .chezmoi.hostname "WeatherLight" }}
 # Detected: Carbon X1 named WeatherLight file
-{{- end }}
-{{- if eq .chezmoi.hostname "iceage" }}
+{{ end }}
+{{ if eq .chezmoi.hostname "iceage" }}
 # Detected: Sony Vaio VGN-P21Z X1 named iceage file
-{{- end }}
+{{ end }}
 
 
 # Transparency for windows
@@ -18,7 +18,7 @@
 "transset -p --inc 0.1"
     Shift + b:4
 
-{{- if eq .chezmoi.hostname "WeatherLight" }}
+{{ if eq .chezmoi.hostname "WeatherLight" }}
 # Beamer with xrandr script for VGA-1
 "{{ .chezmoi.homedir }}/bin/vga-switch.sh"
 	m:0x0 + c:235
@@ -45,9 +45,9 @@
 "pactl set-source-mute @DEFAULT_SINK@ toggle && killall -s 44 i3blocks"
     m:0x0 + c:198
 	XF86AudioMicMute
-{{- end }}
+{{ end }}
 
-{{- if eq .chezmoi.hostname "iceage" }}
+{{ if eq .chezmoi.hostname "iceage" }}
 # Beamer with xrandr script for VGA-1
 # Never tested
 "{{ .chezmoi.homedir }}/bin/vga-switch.sh"
@@ -75,7 +75,7 @@
 "pactl set-source-mute @DEFAULT_SINK@ toggle && killall -s 44 i3blocks"
     m:0x0 + c:198
 	XF86AudioMicMute
-{{- end }}
+{{ end }}
 
 ##################################
 # End of xbindkeys configuration #
