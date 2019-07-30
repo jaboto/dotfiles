@@ -1,0 +1,82 @@
+###########################
+# xbindkeys configuration #
+###########################
+
+# This file has been generated via chezmoi template for this specific computer
+# verify that it matches:
+{{- if eq .chezmoi.hostname "WeatherLight" }}
+# Detected: Carbon X1 named WeatherLight file
+{{- end }}
+{{- if eq .chezmoi.hostname "iceage" }}
+# Detected: Sony Vaio VGN-P21Z X1 named iceage file
+{{- end }}
+
+
+# Transparency for windows
+"transset -p --dec 0.1"
+    Shift + b:5
+"transset -p --inc 0.1"
+    Shift + b:4
+
+{{- if eq .chezmoi.hostname "WeatherLight" }}
+# Beamer with xrandr script for VGA-1
+"{{ .chezmoi.homedir }}/bin/vga-switch.sh"
+	m:0x0 + c:235
+	XF86Display
+
+# Brigthness
+"/bin/bash {{ .chezmoi.homedir }}/bin/x1brightness.sh inc"
+	m:0x0 + c:232
+	XF86MonBrightnessDown
+"/bin/bash {{ .chezmoi.homedir }}/bin/x1brightness.sh dec"
+	m:0x0 + c:233
+	XF86MonBrightnessUp
+
+# Volume
+"pactl set-sink-volume @DEFAULT_SINK@ +5% && killall -s 44 i3blocks"
+    m:0x0 + c:123
+	XF86AudioRaiseVolume
+"pactl set-sink-volume @DEFAULT_SINK@ -5% && killall -s 44 i3blocks"
+    m:0x0 + c:122
+	XF86AudioLowerVolume
+"pactl set-sink-mute @DEFAULT_SINK@ toggle && killall -s 44 i3blocks"
+    m:0x0 + c:121
+	XF86AudioMute
+"pactl set-source-mute @DEFAULT_SINK@ toggle && killall -s 44 i3blocks"
+    m:0x0 + c:198
+	XF86AudioMicMute
+{{- end }}
+
+{{- if eq .chezmoi.hostname "iceage" }}
+# Beamer with xrandr script for VGA-1
+# Never tested
+"{{ .chezmoi.homedir }}/bin/vga-switch.sh"
+	m:0x0 + c:235
+	XF86Display
+
+# Brigthness
+"/bin/bash {{ .chezmoi.homedir }}/bin/vaiobrightness.sh inc"
+	m:0x0 + c:232
+	XF86MonBrightnessDown
+"/bin/bash {{ .chezmoi.homedir }}/bin/vaiobrightness.sh dec"
+	m:0x0 + c:233
+	XF86MonBrightnessUp
+
+# Volume
+"pactl set-sink-volume @DEFAULT_SINK@ +5% && killall -s 44 i3blocks"
+    m:0x0 + c:123
+	XF86AudioRaiseVolume
+"pactl set-sink-volume @DEFAULT_SINK@ -5% && killall -s 44 i3blocks"
+    m:0x0 + c:122
+	XF86AudioLowerVolume
+"pactl set-sink-mute @DEFAULT_SINK@ toggle && killall -s 44 i3blocks"
+    m:0x0 + c:121
+	XF86AudioMute
+"pactl set-source-mute @DEFAULT_SINK@ toggle && killall -s 44 i3blocks"
+    m:0x0 + c:198
+	XF86AudioMicMute
+{{- end }}
+
+##################################
+# End of xbindkeys configuration #
+##################################
