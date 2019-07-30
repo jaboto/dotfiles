@@ -1,2 +1,2 @@
 # dotfiles
-My dotfiles managed with chezmoi
+Jaime Bosque's dotfiles managed with [chezmoi](https://github.com/twpayne/chezmoi)
