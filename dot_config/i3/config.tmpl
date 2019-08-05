@@ -214,8 +214,8 @@ exec --no-startup-id /usr/bin/feh --bg-scale '{{ .chezmoi.homedir }}/Pictures/ar
 
 {{ if eq .chezmoi.hostname "iceage" }}
 exec --no-startup-id blueman-applet
-exec --no-startup-id xcompmgr 
-exec --no-startup-id /usr/bin/feh --bg-scale '{{ .chezmoi.homedir }}/Images/artGnome/background/current' &
+exec --no-startup-id xbindkeys & 
+exec --no-startup-id /usr/bin/feh --bg-scale '{{ .chezmoi.homedir }}/Images/background/current' &
 {{ end }}
 
 
