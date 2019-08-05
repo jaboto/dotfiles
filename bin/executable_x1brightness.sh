@@ -13,20 +13,21 @@ if [ -z $1 ]; then
 	exit
 else
 	action=$1
+	echo "Action is $action"
 fi
 
 case $action in
-	'up')
+	'inc')
 		xbacklight -inc 5
 		curBrightness=`xbacklight -get`
 		notify-send -t 200 'Brigthness' $curBrightness
 	;;
-	'down')
+	'dec')
 		xbacklight -dec 5
 		curBrightness=`xbacklight -get`
 		notify-send -t 200 'Brigthness' $curBrightness
 	;;
-	*) exit;;
+	*) echo 'No proper input action, exiting' && exit;;
 esac
 
 
