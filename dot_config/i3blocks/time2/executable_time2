@@ -1,7 +1,7 @@
 #!/bin/bash
 output=$(date +'%H:%M')
 
-echo "<span>$output</span>"
+echo "<span>$output                                                           </span>"
 
 case $BLOCK_BUTTON in
  1) exec gsimplecal
