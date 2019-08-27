@@ -156,21 +156,38 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Color definitions
-set $bg-color			#191919
-set $brdr-color			#191919
-set $txt-color          #ff6690
-set $i-bg-color			#191919
-set $i-txt-color  		#666666
-set $urgent-bg-color    #383a3b
-set $ind-color			#ff6690
-set $child_brdr-color	#191919
+## Text (titles)
+set $txt-col-f			#191919
+set $txt-col-u			#666666
+set $txt-col-fi			#666666
+set $txt-col-ur			#666666
+## Backgrounds
+set $bg-col-f			#ff8899
+set $bg-col-u			#191919
+set $bg-col-fi			#191919
+set $bg-col-ur			#383a3b
+## Indicators (when opening new windows)
+set $ind-col-f			#ff8899
+set $ind-col-u			#191919
+set $ind-col-fi			#191919
+set $ind-col-ur			#191919
+## Borders
+set $bdr-col-f			#191919
+set $bdr-col-u			#191919
+set $bdr-col-fi			#191919
+set $bdr-col-ur			#191919
+## Child borders
+set $c-bdr-col-f		#191919
+set $c-bdr-col-u		#191919
+set $c-bdr-col-fi		#191919
+set $c-bdr-col-ur		#191919
 
 # Window decorations
-# class                 	border  	backgr. 	text    	indicator 	child_border
-client.focused			    $brdr-color $bg-color	$txt-color	$ind-color 	$child_brdr-color
-client.unfocused		    $brdr-color	$i-bg-color $i-txt-color $brdr-color $child_brdr-color
-client.focused_inactive	    $brdr-color $i-bg-color $i-txt-color $brdr-color $child_brdr-color
-client.urgent			    $brdr-color $urgent-bg-color $i-txt-color $ind-color $child_brdr-color
+# class						border		backgr.		text		indicator	child_border
+client.focused				$bdr-col-f	$bg-col-f	$txt-col-f	$ind-col-f	$c-bdr-col-f
+client.unfocused			$bdr-col-u	$bg-col-u	$txt-col-u	$ind-col-u	$c-bdr-col-u
+client.focused_inactive		$bdr-col-fi $bg-col-fi	$txt-col-fi $ind-col-fi $c-bdr-col-fi
+client.urgent				$bdr-col-ur $bg-col-ur	$txt-col-ur $ind-col-ur $c-bdr-col-uf
 
 
 
@@ -179,20 +196,16 @@ client.urgent			    $brdr-color $urgent-bg-color $i-txt-color $ind-color $child_
 bar {
 		font pango:monospace 8, fixed 9 
         status_command i3blocks
-  		colors {
+		colors {
 			statusline	#76c2d6
 			background	#191919
 		
-			# class                 border 		backgrd 	text
-			#focused_workspace      #acacac 		#191919 	#acacac
-			#active_workspace       #090909 		#090909 	#696f89
-			#inactive_workspace     #090909 		#090909 	#666666
-			#urgent_workspace       #191919 		#191919 	#c7a551
-			focused_workspace      #191919 		#191919 	#ff0090
-			active_workspace       #090909 		#191919 	#090909
-			inactive_workspace     #090909 		#191919 	#666666
-			urgent_workspace       #191919 		#191919 	#c7a551
-   		}
+			# class                border		backgrd		text
+			focused_workspace      #ff8899		#ff8899		#191919
+			active_workspace       #090909		#191919		#666666
+			inactive_workspace     #090909		#191919		#666666
+			urgent_workspace       #191919		#191919		#c7a551
+		}
 }
 
 # Personal edits
