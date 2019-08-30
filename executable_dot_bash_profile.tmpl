@@ -1,0 +1,29 @@
+# ~/.bash_profile: executed by bash(1) for login shells.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
+
+# the default umask is set in /etc/login.defs
+#umask 022
+
+# include .bashrc if it exists
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d ~/bin ] ; then
+    PATH=~/bin:"${PATH}"
+fi
+
+#Specific configurations per device
+{{ if eq .chezmoi.hostname "WeatherLight" }}
+	#Specific configurations for laptops: X1 and Vaio
+# set PATH so it includes Android and Java
+ANDROID_HOME="/home/kets/android/android-sdk-{{ .chezmoi.os }}/tools/"
+ANDROID_HOME_ADB="/home/kets/android/android-sdk-{{ .chezmoi.os }}/platform-tools/"
+JAVA_HOME="/usr/lib/jvm/java-6-sun-1.6.0.26/jre/bin/"
+export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME_ADB:$JAVA_HOME
+
+# set fancy colors from dircolors
+test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+{{ end }}
