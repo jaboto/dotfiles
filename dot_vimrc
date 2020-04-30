@@ -1,0 +1,73 @@
+" Vundle Plugin Manager
+set nocompatible              " required
+filetype off                  " required
+set cryptmethod=blowfish2
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Install the Vundles plugins from another file 
+if filereadable(expand("~/.vimrc.bundles"))
+	source ~/.vimrc.bundles
+endif
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" END Vundle Plugin Manager
+
+syntax on
+colorscheme elflord
+set number
+set tabstop=4
+set shiftwidth=4
+set fileencodings=utf-8
+set fileencoding=utf-8
+set encoding=utf-8
+set autoindent
+set laststatus=2 
+set t_Co=256
+filetype plugin on
+
+" Folding with space
+nnoremap <space> za
+
+"Mapping for the quick-check PHP
+map <C-B> :w! !php -l<CR>
+
+"Mappings for the tabs
+"map <A-1> gT
+"map <A-2> gt
+"map <C-S-t> :tabnew 
+
+"Mappings for the windows
+map wwj :wincmd j<CR>
+map wwk :wincmd k<CR>
+map wwh :wincmd h<CR>
+map wwl :wincmd l<CR>
+
+"Pasting
+"set paste
+
+"Search
+set incsearch
+set ignorecase
+
+" My Python stuff
+" https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 | 
+    \ set softtabstop=4 | 
+    \ set shiftwidth=4 | 
+    \ set textwidth=79 | 
+    \ set expandtab | 
+    \ set autoindent | 
+    \ set fileformat=unix | 

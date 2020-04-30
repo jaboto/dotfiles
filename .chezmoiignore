@@ -1,0 +1,27 @@
+README.md
+LICENSE
+{{- if eq .machine "personal" }}
+# Files not used in the personal laptop
+# We use zsh
+.bashrc
+.bash_profile
+{{- end }}
+
+{{- if eq .machine "work" }}
+# Files not used in the Work laptop
+.bin/executable_vaiobrightness.sh
+.bin/executable_vga-switch.sh
+.bin/executable_x1brightness.sh
+# We use zsh
+.bashrc
+.bash_profile
+{{- end }}
+
+{{- if eq .chezmoi.hostname "raspberry" }}
+.bin/executable_vaiobrightness.sh
+.bin/executable_vga-switch.sh
+.bin/executable_x1brightness.sh
+# We use bash in RaspberryPi
+.zshrc
+.oh-my-zsh
+{{- end }}

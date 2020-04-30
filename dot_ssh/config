@@ -1,0 +1,103 @@
+Host hoyhabloyo
+	HostName hoyhabloyo.com
+	IdentityFile /home/jaime/keys/jaime_servers
+	Port 22
+	#Jekyll forward
+	#LocalForward 4000 127.0.0.1:4000
+	User jaime
+	
+Host hoyhabloyo.remote
+	HostName hoyhabloyo.com
+	IdentityFile /home/jaime/keys/jaime_servers
+	Port 22
+	RemoteForward 34322 localhost:22
+	User jaime
+
+Host hoyhabloyo.dhis2
+	HostName hoyhabloyo.com
+	IdentityFile /home/jaime/keys/jaime_servers
+	Port 22
+	LocalForward 8080 localhost:2280
+	User jaime
+
+Host hoyhabloyo.dhis2
+	HostName hoyhabloyo.com
+	IdentityFile /home/jaime/keys/jaime_servers
+	Port 22
+	RemoteForward 8080 localhost:2280
+	User jaime
+
+
+Host littleus-no-dns
+	HostName nc7-us.quadhost.net
+	IdentityFile /home/jaime/keys/jaime_servers
+	Port 24722
+	User jaime
+
+Host littleus
+	HostName littleus.hoyhabloyo.com
+	IdentityFile /home/jaime/keys/jaime_servers
+	Port 24722
+	User jaime
+
+#Not used any more as from 21/06/2018
+Host littlede
+	HostName 185.164.138.21
+	IdentityFile /home/jaime/keys/jaime_servers
+	Port 5722
+	User jaime
+
+Host opi.bcn
+	HostName hoyhabloyo.com
+	IdentityFile /home/jaime/keys/jaime_servers
+	Port 34222
+	#LocalForward 32838 127.0.0.1:8384
+	User jaime
+
+Host opi.bcn.local
+	HostName 192.168.1.100
+	#IdentityFile /home/jaime/keys/jaime_servers
+	Port 22
+	#LocalForward 8384 localhost:8384
+	User pi
+
+Host pi.bru.local
+	HostName 192.168.1.250
+	IdentityFile /home/jaime/keys/jaime_servers
+	Port 22
+	LocalForward 8384 localhost:8384
+	User jaime
+
+Host pi.bru
+	HostName hoyhabloyo.com
+	IdentityFile /home/jaime/keys/jaime_servers
+	Port 32022
+	LocalForward 32838 127.0.0.1:8384
+	User jaime
+
+Host pi.zgz
+	HostName hoyhabloyo.com
+	IdentityFile /home/jaime/keys/jaime_servers
+	Port 34022
+	LocalForward 34838 127.0.0.1:8384
+	User jaime
+
+Host pi.zgz.local
+	HostName 192.168.1.250
+	IdentityFile /home/jaime/keys/jaime_servers
+	Port 22
+	LocalForward 8384 localhost:8384
+	User jaime
+
+Host github.com
+	Hostname github.com
+	IdentityFile /home/jaime/keys/jaboto_weatherlight_github
+	User git
+
+Host android.dhis2.org
+	Hostname android.dhis2.org
+	User ubuntu
+	Port 22
+	LocalForward 50432	localhost:5432
+	IdentityFile /home/jaime/keys/jaime_uio_android
+
