@@ -7,8 +7,6 @@ The configuration files included the following programs that I use and which are
 * i3
 * i3blocks
 * tmux
-* vim
-
-###### This file has been edited with Dillinger to test how an online Markdown editor works
-
-###### And now it has been edited with Visual Studio Code
+* bash
+* zsh
+* vim (and Vundles in a separate file)
