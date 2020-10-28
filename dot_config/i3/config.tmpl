@@ -123,6 +123,14 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+<<<<<<< HEAD
+=======
+# Scratchpad
+bindsym $mod+minus move scratchpad
+bindsym $mod+Shift+minus scratchpad show
+
+
+>>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -157,17 +165,30 @@ bindsym $mod+r mode "resize"
 
 # Color definitions
 ## Text (titles)
+<<<<<<< HEAD
 set $txt-col-f			#191919
 set $txt-col-u			#666666
 set $txt-col-fi			#666666
 set $txt-col-ur			#191919
 ## Backgrounds
 set $bg-col-f			#ac5c67
+=======
+set $txt-col-f			#dddddd
+set $txt-col-u			#dddddd
+set $txt-col-fi			#666666
+set $txt-col-ur			#191919
+## Backgrounds
+set $bg-col-f			#800080
+>>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
 set $bg-col-u			#191919
 set $bg-col-fi			#191919
 set $bg-col-ur			#ff8899
 ## Indicators (when opening new windows)
+<<<<<<< HEAD
 set $ind-col-f			#ac5c67
+=======
+set $ind-col-f			#800080
+>>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
 set $ind-col-u			#191919
 set $ind-col-fi			#191919
 set $ind-col-ur			#191919
@@ -201,7 +222,11 @@ bar {
 			background	#191919
 		
 			# class                border		backgrd		text
+<<<<<<< HEAD
 			focused_workspace      #ac5c67		#ac5c67		#191919
+=======
+			focused_workspace      #800080		#800080		#dddddd
+>>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
 			active_workspace       #090909		#191919		#666666
 			inactive_workspace     #090909		#191919		#666666
 			urgent_workspace       #191919		#191919		#c7a551
@@ -213,9 +238,20 @@ bar {
 
 # Rofi as DMENU all settings passed here
 bindsym $mod+d exec rofi -show run
+<<<<<<< HEAD
  
 # Programs to be run at start
 {{ if eq .chezmoi.hostname "WeatherLight" }}
+=======
+bindsym $mod+Shift+d exec rofi -show window
+
+# Lock the screen using i3lock-fancy
+bindsym $mod+F3 exec i3lock-fancy -g 
+
+# Programs to be run at start
+{{ if eq .chezmoi.hostname "WeatherLight" }}
+## Chezmoi edits for carbon X1 (weatherlight)
+>>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
 exec --no-startup-id wicd-gtk -t
 exec --no-startup-id pasystray
 exec --no-startup-id blueman-applet
@@ -223,12 +259,28 @@ exec --no-startup-id xcompmgr
 exec --no-startup-id pulseaudio
 exec --no-startup-id xbindkeys &
 exec --no-startup-id /usr/bin/feh --bg-scale '{{ .chezmoi.homedir }}/Pictures/artGnome/background/current' &
+<<<<<<< HEAD
 {{ end }}
 
 {{ if eq .chezmoi.hostname "iceage" }}
+=======
+exec --no-startup-id /home/jaime/bin/low_battery_i3.sh 
+exec --no-startup-id terminator -e tmux
+{{ end }}
+
+{{ if eq .chezmoi.hostname "iceage" }}
+## Chezmoi edits for Sony Vaio (iceage)
+>>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
 exec --no-startup-id blueman-applet
 exec --no-startup-id xbindkeys & 
 exec --no-startup-id /usr/bin/feh --bg-scale '{{ .chezmoi.homedir }}/Images/background/current' &
 {{ end }}
 
+<<<<<<< HEAD
+=======
+# Acccess the quick console launched at every startup
+for_window [class=Terminator] move scratchpad; scratchpad show; move position 10px 10px; resize set 1575 850; move scratchpad
+bindsym $mod+F1 [class=Terminator] scratchpad show
+ 
+>>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
 

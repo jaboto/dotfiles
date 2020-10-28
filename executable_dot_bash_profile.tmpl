@@ -15,9 +15,12 @@ if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
 
+<<<<<<< HEAD
 #Specific configurations per device
 {{ if eq .chezmoi.hostname "WeatherLight" }}
 	#Specific configurations for laptops: X1 and Vaio
+=======
+>>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
 # set PATH so it includes Android and Java
 ANDROID_HOME="/home/kets/android/android-sdk-{{ .chezmoi.os }}/tools/"
 ANDROID_HOME_ADB="/home/kets/android/android-sdk-{{ .chezmoi.os }}/platform-tools/"
@@ -26,4 +29,7 @@ export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME_ADB:$JAVA_HOME
 
 # set fancy colors from dircolors
 test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+<<<<<<< HEAD
 {{ end }}
+=======
+>>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
