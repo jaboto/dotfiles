@@ -47,15 +47,15 @@ Host littlede
 	Port 5722
 	User jaime
 
-Host opi.bcn
+Host opi.zgz
 	HostName hoyhabloyo.com
 	IdentityFile /home/jaime/keys/jaime_servers
-	Port 34222
+	Port 34022
 	#LocalForward 32838 127.0.0.1:8384
 	User jaime
 
-Host opi.bcn.local
-	HostName 192.168.1.100
+Host opi.zgz.local
+	HostName 192.168.1.251
 	#IdentityFile /home/jaime/keys/jaime_servers
 	Port 22
 	#LocalForward 8384 localhost:8384
@@ -92,6 +92,11 @@ Host pi.zgz.local
 Host github.com
 	Hostname github.com
 	IdentityFile /home/jaime/keys/jaboto_weatherlight_github
+	User git
+
+Host gitlab
+	Hostname gitlab.com
+	IdentityFile /home/jaime/keys/jaime@gitlab
 	User git
 
 Host android.dhis2.org
