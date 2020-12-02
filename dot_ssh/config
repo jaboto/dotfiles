@@ -13,6 +13,8 @@ Host hoyhabloyo.remote
 	RemoteForward 34322 localhost:22
 	User jaime
 
+<<<<<<< HEAD
+=======
 Host hoyhabloyo.dhis2
 	HostName hoyhabloyo.com
 	IdentityFile /home/jaime/keys/jaime_servers
@@ -28,6 +30,7 @@ Host hoyhabloyo.dhis2
 	User jaime
 
 
+>>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
 Host littleus-no-dns
 	HostName nc7-us.quadhost.net
 	IdentityFile /home/jaime/keys/jaime_servers
@@ -91,6 +94,10 @@ Host pi.zgz.local
 
 Host github.com
 	Hostname github.com
+<<<<<<< HEAD
+	IdentityFile /home/jaime/keys/jaboto@github
+	User git
+=======
 	IdentityFile /home/jaime/keys/jaboto_weatherlight_github
 	User git
 
@@ -106,3 +113,4 @@ Host android.dhis2.org
 	LocalForward 50432	localhost:5432
 	IdentityFile /home/jaime/keys/jaime_uio_android
 
+>>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
