@@ -58,6 +58,10 @@ map wwl :wincmd l<CR>
 set incsearch
 set ignorecase
 
+" My markdown stuff
+"  Disable autofolding
+let g:vim_markdown_folding_disabled = 1
+
 " My Python stuff
 " https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
 au BufNewFile,BufRead *.py

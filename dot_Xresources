@@ -50,3 +50,7 @@ URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
 URxvt.depth: 24
+
+
+!! Some plugins
+URxvt.perl-ext-common: resize-font
