@@ -8,15 +8,23 @@
 {{ end }}
 
 {{ if eq .chezmoi.hostname "WeatherLight" }}
+<<<<<<< HEAD
+# Thinkpad X1 Carbon trackpoint
+ID=`xinput list | grep "TrackPoint" | awk '{ split($6,id,"="); print id[2] }'`
+=======
 ID=`xinput list | grep "TrackPoint" | awk '{ split($6,id,"="); print id[2] }'`
 # Thinkpad X1 Carbon trackpoint wheel
+>>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
 xinput set-int-prop $ID "Evdev Wheel Emulation" 8 1
 xinput set-int-prop $ID "Evdev Wheel Emulation Button" 8 2
 xinput set-int-prop $ID "Evdev Wheel Emulation Axes" 8 6 7 4 5
 xinput set-prop $ID "Evdev Wheel Emulation Inertia" 10
 xinput set-prop $ID "Evdev Wheel Emulation Timeout" 200
+<<<<<<< HEAD
+=======
 # Thinkpad X1 Carbon trackpoint acceleration
 xinput --set-prop 12 "Accel Profile Enabled" 0 1
+>>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
 {{ end }}
 
 # Locale settings

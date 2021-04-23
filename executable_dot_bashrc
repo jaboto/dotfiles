@@ -1,3 +1,4 @@
+export VISUAL=vim
 export EDITOR=vim
 
 # Set a fancy prompt ALWAYS
