@@ -13,8 +13,6 @@ Host hoyhabloyo.remote
 	RemoteForward 34322 localhost:22
 	User jaime
 
-<<<<<<< HEAD
-=======
 Host hoyhabloyo.dhis2
 	HostName hoyhabloyo.com
 	IdentityFile /home/jaime/keys/jaime_servers
@@ -29,8 +27,6 @@ Host hoyhabloyo.dhis2
 	RemoteForward 8080 localhost:2280
 	User jaime
 
-
->>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
 Host littleus-no-dns
 	HostName nc7-us.quadhost.net
 	IdentityFile /home/jaime/keys/jaime_servers
@@ -94,15 +90,7 @@ Host pi.zgz.local
 
 Host github.com
 	Hostname github.com
-<<<<<<< HEAD
-	IdentityFile /home/jaime/keys/jaboto_ixalan_github
-=======
-<<<<<<< HEAD
 	IdentityFile /home/jaime/keys/jaboto@github
-	User git
-=======
-	IdentityFile /home/jaime/keys/jaboto_weatherlight_github
->>>>>>> e77d0ccc1dff81db0d1e9624ee2865f6ca2c184c
 	User git
 
 Host gitlab
@@ -117,7 +105,6 @@ Host android.dhis2.org
 	LocalForward 50432	localhost:5432
 	IdentityFile /home/jaime/keys/jaime_uio_android
 
-<<<<<<< HEAD
 Host academy.android.dhis2.org
 	Hostname academy.android.dhis2.org
 	User jaimebosque
@@ -141,6 +128,3 @@ Host crash.android.dhis2.org
 	Port 22
 	IdentityFile /home/jaime/keys/jaime_uio_ansible
 	ProxyJump bastion.android
-=======
->>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
->>>>>>> e77d0ccc1dff81db0d1e9624ee2865f6ca2c184c
