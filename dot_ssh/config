@@ -90,7 +90,7 @@ Host pi.zgz.local
 
 Host github.com
 	Hostname github.com
-	IdentityFile /home/jaime/keys/jaboto@github
+	IdentityFile /home/jaime/keys/jaime_ixalan_github
 	User git
 
 Host gitlab
@@ -98,29 +98,40 @@ Host gitlab
 	IdentityFile /home/jaime/keys/jaime@gitlab
 	User git
 
+Host bastion.android
+	Hostname 52.47.41.162
+	user jbosque
+	IdentityFile /home/jaime/keys/jaime_uio_ansible
+
 Host android.dhis2.org
 	Hostname android.dhis2.org
-	User ubuntu
+	User jbosque
 	Port 22
-	LocalForward 50432	localhost:5432
-	IdentityFile /home/jaime/keys/jaime_uio_android
+	# LocalForward 50432	localhost:5432
+	IdentityFile /home/jaime/keys/jaime_uio_ansible
+	ProxyJump bastion.android
+
+Host android2.dhis2.org
+	Hostname android2.dhis2.org
+	User jbosque
+	Port 22
+	# LocalForward 50432	localhost:5432
+	IdentityFile /home/jaime/keys/jaime_uio_ansible
+	ProxyJump bastion.android
 
 Host academy.android.dhis2.org
 	Hostname academy.android.dhis2.org
 	User jaimebosque
 	Port 22
-	IdentityFile /home/jaime/keys/jaime_uio_android
-
-Host bastion.android
-	Hostname 52.47.41.162
-	user jbosque
-	IdentityFile /home/jaime/keys/jaime_uio_android
+	IdentityFile /home/jaime/keys/jaime_uio_ansible
+	ProxyJump bastion.android
 
 Host testing.android.dhis2.org
 	Hostname 15.236.185.41
 	User jbosque
 	Port 22
-	IdentityFile /home/jaime/keys/jaime_uio_android
+	IdentityFile /home/jaime/keys/jaime_uio_ansible
+	ProxyJump bastion.android
 
 Host crash.android.dhis2.org
 	Hostname crash.android.dhis2.org

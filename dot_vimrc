@@ -7,26 +7,16 @@ set cryptmethod=blowfish2
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-<<<<<<< HEAD
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
-=======
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " Install the Vundles plugins from another file 
 if filereadable(expand("~/.vimrc.bundles"))
 	source ~/.vimrc.bundles
 endif
->>>>>>> d625b39e2a78fe257e06a878512517e354873d2b
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
