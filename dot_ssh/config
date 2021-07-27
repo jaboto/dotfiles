@@ -55,10 +55,10 @@ Host opi.zgz
 
 Host opi.zgz.local
 	HostName 192.168.1.251
-	#IdentityFile /home/jaime/keys/jaime_servers
+	IdentityFile /home/jaime/keys/jaime_servers
 	Port 22
 	#LocalForward 8384 localhost:8384
-	User pi
+	User jaime
 
 Host pi.bru.local
 	HostName 192.168.1.250
