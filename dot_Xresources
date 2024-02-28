@@ -38,9 +38,9 @@
 
 !! URxvt Appearance
 !! Font prefferenes
-urxvt.font: xft:Hack:pixelsize=11:antialias=True
-urxvt.boldFont: xft:Hack:pixelsize=11:weight=bold
-urxvt.italicFont: xft:Hack:pixelsize=11:weight=italic
+urxvt.font: xft:Hack:pixelsize=12:antialias=True,xft:Symbola
+urxvt.boldFont: xft:Hack:pixelsize=12:weight=bold,xft:Symbola
+urxvt.italicFont: xft:Hack:pixelsize=12:weight=italic,xft:Symbola
 urxvt.letterSpace: -1
 URxvt.lineSpace: 0
 URxvt.internalBorder: 10
@@ -51,6 +51,6 @@ URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
 URxvt.depth: 24
 
-
 !! Some plugins
-URxvt.perl-ext-common: resize-font
+URxvt.perl-ext-common: defaults,resize-font
+URxvt.resize-font.step: 2
